@@ -1,0 +1,101 @@
+/* Base Styles */
+body {
+    background: #252424;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eee; /* Light text for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px; /* Ensures content is not hidden behind the fixed header */
+}
+
+/* Fixed Header Styles */
+header {
+    background: #0d0d0d;
+    padding: 20px;
+    text-align: center; /* Center-aligns all content within the header */
+    color: #ffffff;
+    border-bottom: 2px solid #444;
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Spans the full width of the viewport */
+    z-index: 1000; /* Keeps header above other content */
+}
+
+header img {
+    width: 80px; /* Adjust size for better proportion */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the logo within the header */
+}
+
+header h1 {
+    margin: 10px 0 0;
+    font-size: 24px;
+}
+
+/* Center and Style Form */
+main {
+    width: 100%;
+    max-width: 600px; /* Restricts form width on larger screens */
+    margin: 20px auto;
+}
+
+fieldset {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    border-radius: 8px; /* Rounds the corners for a modern look */
+    background-color: #333333; /* Dark background within fieldset */
+}
+
+legend {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+/* Form Labels and Inputs */
+form label {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form select,
+form input[type="number"],
+form input[type="date"] {
+    width: calc(100% - 20px); /* Takes full width minus padding */
+    padding: 10px;
+    margin-top: 5px;
+    background: #555;
+    color: #eee;
+    border: 1px solid #777;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #0d6efd; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0b5ed7; /* Slightly darker on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    main {
+        padding: 0 15px;
+    }
+}

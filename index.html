@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Link to CSS file -->
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <title>Licenses Data Entry</title>
+</head>
+<body>
+   <header>
+      <!-- Adds Logo -->
+      <img src="img/license tracker logo3.png" alt="License Tracker Logo" />
+      <h1>License Tracker</h1>
+   </header>
+   
+   <main>
+      <fieldset>
+         <!-- Form to accept data input -->
+         <legend>Enter License Data</legend>
+         <form action="insert_license.php" method="post"> <!-- Link to php file -->
+            <label for="license_type">License Type:</label>
+            <select name="license_type" id="license_type" required>
+               <option value="VAC Received">VAC Received</option>
+               <option value="VAC Distributed">VAC Distributed</option>
+               <option value="ENT Received">ENT Received</option>
+               <option value="ENT Distributed">ENT Distributed</option>
+            </select>
+            <br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" required>
+            <br><br>
+
+            <label for="date_received">Date Received:</label>
+            <input type="date" name="date_received" id="date_received" required>
+            <br><br>
+
+            <input type="submit" value="Submit">
+         </form>
+      </fieldset>
+   </main>
+</body>
+</html>
