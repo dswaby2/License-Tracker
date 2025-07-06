@@ -1,8 +1,6 @@
 
 # License Tracker
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/384d017e-e935-44dc-9e7d-1626c1a36de1/ReportSection
-
 ## Problem Statement
 Previously, a company had no clear way to track expensive software licenses received versus distributed, leading to risks of over-purchasing, underutilization, and compliance issues. This Power BI License Tracker dashboard solves this by providing an interactive view of license  allocations, enabling better planning, accountability, and efficient use of costly license resources across the organization.
 
@@ -67,28 +65,28 @@ Step 4: Connected the MySQL database to Power BI using the MySQL connector to im
 
 Step 5: Loaded the data into Power BI Desktop and verified that records were correctly imported with no errors or empty values.
 
-Step 6: A measure was created to calculate the total Enterprise (ENT) liscenses that were distributed.
+Step 6: A measure was created to calculate the total Enterprise (ENT) licenses that were distributed.
 
-The following DAX expression was written to find total ENT distributed:
+The following DAX expression was written to find the total ENT distributed:
 
         Total ENT Distributed = CALCULATE(SUM(licenses[quantity]), licenses[license_type] = "ENT Distributed")
 
-Step 7: A measure was created to calculate the total Enterprise (ENT) liscenses that were received.
+Step 7: A measure was created to calculate the total Enterprise (ENT) licenses that were received.
 
-The following DAX expression was written to find total ENT received:
+The following DAX expression was written to find the total ENT received:
 
        Total ENT Received = CALCULATE(SUM(licenses[quantity]),licenses[license_type] = "ENT Received")
 
 
-Step 8: A measure was created to calculate the  total Video Analytics Channel (VAC) liscenses that were distributed.
+Step 8: A measure was created to calculate the  total Video Analytics Channel (VAC) licenses that were distributed.
 
-The following DAX expression was written to find total VAC distributed: 
+The following DAX expression was written to find the total VAC distributed: 
 
      Total VAC Distributed = CALCULATE(SUM(licenses[quantity]),licenses[license_type] = "VAC Distributed")
 
-Step 9: A measure was created to calculate the total Video Analytics Channel (VAC) liscenses that were received.
+Step 9: A measure was created to calculate the total Video Analytics Channel (VAC) licenses that were received.
 
-The following DAX expression was written to find total VAC received:
+The following DAX expression was written to find the total VAC received:
 
      Total VAC Received = CALCULATE(SUM(licenses[quantity]),licenses[license_type] = "VAC Received")
         
@@ -96,30 +94,35 @@ The following DAX expression was written to find total VAC received:
 Step 10: Built interactive cards and clustered column chart visual  in the Power BI to display the total licenses received vs. distributed
 
 Snap of Power BI Clustered Column Chart Visual 
-![Power BI Cards](img/Power BI Cards.png)
+
+![Power BI Cards](img/Power%20BI%20Cards.png)
 
 Snap of Power BI Clustered Column Chart Visual 
-![Power BI Clustered Column Chart](img/Power BI Clustered Column Chart.png)
+
+![Power BI Clustered Column Chart](img/Power%20BI%20Clustered%20Column%20Chart.png)
 
 Step 11: Added slicers and filters to allow users to analyze license distribution by date.
 
 Snap of Power BI Power BI Slicer and Filter
-![Power BI Slicer and Filter](img/Power BI Slicer and Filter.png)
+
+![Power BI Slicer and Filter](img/Power%20BI%20Slicer%20and%20Filter.png)
 
 Step 12: Applied a consistent report theme and layout for clear, professional presentation.
 
-Snap of Power BI Power BI VAC Report
-![Power BI ENT Report](img/Power BI ENT Report.png)
-
 Snap of Power BI Power BI ENT Report
-![Power BI VAC Report](img/Power BI VAC Report.png)
 
-Step 13: The report was published to Power Bi Service
+![Power BI ENT Report](img/Power%20BI%20ENT%20Report.png)
+
+Snap of Power BI Power BI VAC Report
+
+![Power BI VAC Report](img/Power%20BI%20VAC%20Report.png)
+
+Step 13: The report was published to Power BI Service
 
 
 # Insights
 
-Following inferences can be drawn from the dashboard;
+The following inferences can be drawn from the dashboard:
 
 ### [1] Video Analytics Channel Licenses Distributed VS Received
 
@@ -128,4 +131,4 @@ Following inferences can be drawn from the dashboard;
  
 ### [2] Enterprise Licenses Distributed VS Received
 
-         The number of ENT licenses received exceeded the number distributed, indicating less demand and highlighted why less was purchaseed monthly in comparison to VAC licenses.
+         The number of ENT licenses received exceeded the number distributed, indicating less demand and highlighting why fewer were purchased monthly in comparison to VAC licenses.
